@@ -1,0 +1,26 @@
+#GameBoardCanvas {
+    border: 1px solid red;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    display: inline-block;
+
+    background: black;
+    padding: 5px;
+}
+
+canvas{
+    display: inline-block;
+    align-content: center;
+    vertical-align: middle;
+    text-align: center;
+    align-self: center;
+}
+
+div{
+
+
+}
