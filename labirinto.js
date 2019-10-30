@@ -22,6 +22,7 @@ request.onload = function() {
         x: labirinto['inicio'][0],
         y: labirinto['inicio'][1]
     };
+
     var saida = {
         x: labirinto['fim'][0],
         y: labirinto['fim'][1]
@@ -138,7 +139,11 @@ request.onload = function() {
         contador++;
     }
     if (player.x == saida.x && player.y == saida.y) {
-        window.alert("Parabéns, você concluiu o labirinto com: " + contador + " passos");
+        estrelas = 1;
+        if(contador<tamanho){
+            estrelas = 3;
+        }
+        window.alert("Parabéns, você concluiu o labirinto com: " + contador + " passos\nVocê conseguiu "+ estrelas + " estrelas neste desafio");
     }
 
     draw();
