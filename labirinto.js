@@ -13,7 +13,11 @@ request.onload = function() {
     var labirinto = request.response;
     
     l = labirinto['labirinto'];
-    console.log(labirinto['inicio'][0]);
+    //console.log(labirinto['inicio'][0]);
+    var dificuldade = labirinto['dificuldade'];
+    var caminho = labirinto['caminho'];
+    var tamanho = caminho.length;
+    window.alert("bem vindo ao ArI-Mazer o desafio a seguir tem a dificuldade: " + dificuldade + " resolva em menos de "+ tamanho + " passos para conseguir 3 estrelas");
     var inicio = {
         x: labirinto['inicio'][0],
         y: labirinto['inicio'][1]
