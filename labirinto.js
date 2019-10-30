@@ -17,7 +17,7 @@ request.onload = function() {
     var dificuldade = labirinto['dificuldade'];
     var caminho = labirinto['caminho'];
     var tamanho = caminho.length;
-    window.alert("bem vindo ao ArI-Mazer o desafio a seguir tem a dificuldade: " + dificuldade + " resolva em menos de "+ tamanho + " passos para conseguir 3 estrelas");
+    window.alert("bem vindo ao ArI-Mazer o desafio a seguir tem a dificuldade: " + dificuldade + ". \nResolva em menos de "+ tamanho + " passos para conseguir 3 estrelas");
     var inicio = {
         x: labirinto['inicio'][0],
         y: labirinto['inicio'][1]
