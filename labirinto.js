@@ -20,13 +20,13 @@ request.onload = function() {
     var tamanho = caminho.length;
     window.alert("bem vindo ao ArI-Mazer o desafio a seguir tem a dificuldade: " + dificuldade + ". \nResolva em menos de "+ tamanho + " passos para conseguir 3 estrelas");
     var inicio = {
-        x: labirinto['inicio'][0],
-        y: labirinto['inicio'][1]
+        x: labirinto['inicio'][1],
+        y: labirinto['inicio'][0]
     };
 
     var saida = {
-        x: labirinto['fim'][0],
-        y: labirinto['fim'][1]
+        x: labirinto['fim'][1],
+        y: labirinto['fim'][0]
     };
     var board = labirinto['labirinto'];
     var contador = 0;
