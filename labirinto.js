@@ -33,7 +33,7 @@ request.onload = function() {
     var player = inicio;
 
 
-    //Draw the game board
+    //Desenha o tabuleiro
     function draw() {
         var width = canvas.width();
         var blockSize = width / board.length;
@@ -41,23 +41,27 @@ request.onload = function() {
         ctx.setTransform(1, 0, 0, 1, 0, 0);
         ctx.clearRect(0, 0, width, width);
         ctx.fillStyle = "white";
-        //Loop through the board array drawing the walls and the goal
+        //Faz um loop através do tabuleiro para desenhar os muros
         for (var y = 0; y < board.length; y++) {
             for (var x = 0; x < board[y].length; x++) {
-            //Draw a wall
+            //Desenha o Muro
                 if (board[y][x] === 1) {
                     
                     ctx.fillRect(x * blockSize, y * blockSize, blockSize, blockSize);
                 }
 
-                if(board[y][x] == -1){
+                if(board[y][x] === -1){
+                    // var half = blockSize / 2;
+                    // ctx.fillStyle = "white";
+                    // ctx.arc(player.x * blockSize + half, player.y * blockSize + half, half, 0, 2 * Math.PI);
+                    // ctx.fill();
+                    ctx.beginPath();
                     var half = blockSize / 2;
                     ctx.fillStyle = "blue";
                     ctx.arc(player.x * blockSize + half, player.y * blockSize + half, half, 0, 2 * Math.PI);
                     ctx.fill();
-            
                 }
-            //Draw the goal
+            
             }
         }
 
@@ -65,7 +69,7 @@ request.onload = function() {
 
 
 
-    //Draw the player
+    //Desenha a bolinha do jogador
         ctx.beginPath();
         var half = blockSize / 2;
         ctx.fillStyle = "blue";
@@ -77,7 +81,7 @@ request.onload = function() {
     }
 
 
-    //Check to see if the new space is inside the board and not a wall
+    //checa se o movimento solicitado está dentro do tabuleiro ou não é contra uma parede
     function canMove(x, y) {
     return (y >= 0) && (y < board.length) && (x >= 0) && (x < board[y].length) && (board[y][x] != 1);
     }
@@ -85,13 +89,13 @@ request.onload = function() {
 
 
     $(document).keyup(function(e) {
-    if ((e.which == 38) && canMove(player.x, player.y - 1)) { //Up arrow
+    if ((e.which == 38) && canMove(player.x, player.y - 1)) { 
         player.y--;
         contador++;
         console.log(player.x);
         console.log(player.y);
         
-    } else if ((e.which == 40) && canMove(player.x, player.y + 1)) { // down arrow
+    } else if ((e.which == 40) && canMove(player.x, player.y + 1)) { 
         player.y++;
         contador++;
         console.log(player.x);
