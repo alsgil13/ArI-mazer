@@ -1,0 +1,28 @@
+<html>
+
+    <head>
+        <script>
+            
+            var requestURL = 'http://alsgil13.pythonanywhere.com/';    
+            var request = new XMLHttpRequest();
+            request.open('GET', requestURL);
+            request.responseType = 'json';
+            request.send();
+            
+            request.onload = function() {
+                var labirinto = request.response;
+                console.log(labirinto)
+                l = labirinto['labirinto'];
+                console.log(l);
+
+            }
+
+                                    
+        </script>
+    </head>
+
+    <body>
+        
+    </body>
+
+</html>

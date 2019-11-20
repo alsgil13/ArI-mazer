@@ -8,11 +8,18 @@
         
     </head>
 
+
+
+
     <body>
-        <div>
-            <canvas id="GameBoardCanvas" width="800px" height="800px"></canvas>
+        <div class="tela">
+            <canvas id="GameBoardCanvas" width="600px" height="600px"></canvas>
+            <script src="labirinto.js"></script>
+            <br>
+            <input type="button" value="Reiniciar" onclick='javascript:location.reload(true);'>            
+            <input type="button" id="revela" value="Revelar Caminho" >
         </div>
     </body>
-    <script src="labirinto.js"></script>
+
 
 </html>
