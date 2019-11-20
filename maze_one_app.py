@@ -6,12 +6,12 @@ from maoesquerda import maoEsquerda, classifica
 
 
 from flask import Flask
-#from flask_cors import CORS
+from flask_cors import CORS
 import json
 
 
 app = Flask(__name__)
-#CORS(app)
+CORS(app)
 @app.route('/')
 def serve_ari():
     labirinto = get_labirinto()
@@ -27,6 +27,6 @@ def serve_ari():
     print(type(labirintobj))
     app_json = json.dumps(labirintobj)
     return app_json
-    
+
 
 print(serve_ari())
