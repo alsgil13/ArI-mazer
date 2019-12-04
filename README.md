@@ -17,7 +17,7 @@
 <p>Para a realização deste trabalho foi criado um labirinto inicial composto por 0 (onde há passagem) e 1 (onde há parede), foi programado um agente não informado para resolver este labirinto</p>
 <h3>Como funciona?</h3>
 <p>São 5 as funções que fazem o agente funcionar sendo uma função auxiliar para localizar as portas de entrada e saída do labirinto, três funções básicas do agente e uma função que integra as demais</p>
-###Localizando as portas do labirinto
+<h3>Localizando as portas do labirinto</h3>
 <p>Para que o agente possa iniciar seu percuso pelo labirinto é preciso econtroar as portas de entrada e saída. Este agente foi programado para localizá-las sempre na primeira coluna (entrada) e na última coluna(saída), ele basicamente percorre essas duas colunas a procura de um valor 0. Caso exista mais de uma entrada ou saída o agente entenderá como entrada somente a porta mais acima e como saída a porta mais abaixo.</p>
 
 ```python
@@ -245,11 +245,14 @@ def serve_ari():
     app_json = json.dumps(labirintobj)
     return app_json
 ```
+
 <p>Como pode-se observar no código a 'serve_ari' importa as funções descritas anteriormente gerando e calculando a saída do labirinto e monta um json contendo o labirinto, o caminho encontrado, a dificuldade, o início e o fim do labirinto, este json é consumido pelo arquivo que será apresentado a seguir.</p>
 <h3>Interface</h3>
 <p>Foram criados arquivos html/css/js para consumir os dados da api apresentada anteriormente e gerar um console de interação com o usuário, no final das contas um jogo de labirinto</p>
 <h4>Calculando a dificuldade</h4>
-<p>Para calcular o nível de dificuldade do labrinto foi utilizado a seguitne fórmula: se o caminho encontrado pelo agente tiver menos de 500 passo o labirinto é classificado como fácil, caso seja maior que 500 e meno que 1000, o labirinto é classificado como médio e caso seja maior que 1000 o labirinto é classificado como difícil, a função que faz essa classificação está exposta abaixo:</p>
+<p>Para calcular o nível de dificuldade do labrinto foi utilizado a seguitne fórmula: se o caminho encontrado pelo agente tiver menos de 500 passo o labirinto é classificado como fácil, caso seja maior que 500 e meno que 1000, o labirinto é classificado como médio e caso seja maior que 1000 o labirinto é classificado como difícil, a função que faz essa classificação está exposta abaixo:
+</p>
+
 ```python
 def classifica(caminho):
   tam = len(caminho)
