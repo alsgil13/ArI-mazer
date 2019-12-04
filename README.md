@@ -1,4 +1,4 @@
-# ArI-mazer
+<h1> ArI-mazer</h1>
 <h3>Trabalho de IA para geração e resolução de labirintos</h3>
 <p>Trabalho realizado como parte dos critérios para aprovação na disciplina de Inteligência Artifical</p>
 <p>Regras:</p>
@@ -41,9 +41,8 @@ def locPortas(labirinto):
   <li>Se também não puder seguir em frente e se puder virar à direita, então vire à direita</li>
   <li>Finalmente, se estiver em um ponto morto (beco sem saída), então gire 180º e volte</li>
 </ol>
-<p>
-Porém a dificuldade encontrada aqui é que 'virar a esquerda', por exemplo são operações diferentes dependendo da direção do agente, para resolver esse problema foi criado o conceito de contexto através da função abaixo:
-</p>
+<p>Porém a dificuldade encontrada aqui é que 'virar a esquerda', por exemplo são operações diferentes dependendo da direção do agente, para resolver esse problema foi criado o conceito de contexto através da função abaixo:</p>
+
 ```python
 def get_contexto(pos,nova_pos):
     #recebe duas posições da matriz (x e y, x2 e y2)
@@ -75,17 +74,18 @@ def get_contexto(pos,nova_pos):
         }
     }
     #verifica pra onde foi o passo
-    if (nova_pos[0]<pos[0]):
+    if (nova_pos[0] < pos[0]):
         return contexto['norte']
-    elif (nova_pos[0]>pos[0]):
+    elif (nova_pos[0] > pos[0]):
         return contexto['sul']
-    elif (nova_pos[1]<pos[1]):
+    elif (nova_pos[1] < pos[1]):
         return contexto['oeste']
-    elif (nova_pos[1]>pos[1]):
+    elif (nova_pos[1] > pos[1]):
         return contexto['leste']
     else:
         return "Mesma Posição"
 ```
+
 <h3>Olhando o caminho</h3>
 <p>Além de saber a direção que está indo também é (extremamente) importante saber se há caminho naquela direção, para isso foi criada a função abaixo que retorna todos os caminhos possíveis a partir da posição do agente:</p>
 ```python
@@ -108,6 +108,7 @@ def olha(labirinto,pos,contexto):
 ```
 <h3>Andando</h3>
 <p>Para facilitar a escrita do código para o deslocamento do agente foi criada a função abaixo:</p>
+
 ```python
 def anda(pos,passo):
     nova_pos = [pos[0]+passo[0],pos[1]+passo[1]]
@@ -116,6 +117,7 @@ def anda(pos,passo):
 
 <h2>ArI</h2>
 <p>O nome ArI foi escolhido em, homenagem à Ariadne, personagem da mitologia grega (filha de Minus) que deu o fio dourado para que teseu pudesse escapar do labirinto de seu irmão (Minotauro). Eis abaixo o coração do algoritmo que integra todas as funções demonstradas até aqui para resolver o labirinto.</p>
+
 ```python
 #Função que vai resolver o labirinto
 def maoEsquerda(labirinto):
@@ -149,8 +151,10 @@ def maoEsquerda(labirinto):
     #retorna o caminho percorrido
     return caminho
 ```
+
 <h2>Além do escopo</h2>
 <p>Além do ArI, também foi criada uma rotina para geração dos labirintos de forma aleatória, para isto adaptamos o código diposnível <a href="http://code.activestate.com/recipes/578356-random-maze-generator/">AQUI</a> a baixo apresentamos a função reponsável por gerar os labirintos de forma aleatória:</p>
+
 ```python
 def get_labirinto():
   mx = 41; my = 41 # tamanho do labirinto
@@ -218,6 +222,7 @@ def get_labirinto():
 
     return maze  
 ```
+
 <h2>Interface para o Usuário</h2>
 <p>Todas essa funções foram integradas em uma API hospedada no PythonAnywhere (disponível <a href="http://alsgil13.pythonanywhere.com/">aqui</a>). A função que roda na api está exposta abaixo: </p>
 
