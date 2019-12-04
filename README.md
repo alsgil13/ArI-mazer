@@ -249,7 +249,7 @@ def serve_ari():
 <h3>Interface</h3>
 <p>Foram criados arquivos html/css/js para consumir os dados da api apresentada anteriormente e gerar um console de interação com o usuário, no final das contas um jogo de labirinto</p>
 <h4>Calculando a dificuldade</h4>
-<p>Para calcular o nível de dificuldade do labrinto foi utilizado a seguitne fórmula: se o caminho encontrado pelo agente tiver menos de 500 passo o labirinto é classificado como fácil, caso seja maior que 500 e meno que 1000, o labirinto é classificado como médio e caso seja maior que 1000 o labirinto é classificado como difícil, a funçãoq ue faz essa classificação está exposta abaixo:</p>
+<p>Para calcular o nível de dificuldade do labrinto foi utilizado a seguitne fórmula: se o caminho encontrado pelo agente tiver menos de 500 passo o labirinto é classificado como fácil, caso seja maior que 500 e meno que 1000, o labirinto é classificado como médio e caso seja maior que 1000 o labirinto é classificado como difícil, a função que faz essa classificação está exposta abaixo:</p>
 ```python
 def classifica(caminho):
   tam = len(caminho)
@@ -262,4 +262,4 @@ def classifica(caminho):
     dif = 'Difícil'
   return dif
 ```
-<a href="labirinto.html"><input type="button" value="Iniciar Iterface de Usuário do Labirinto" class="btn btn-block btn-success"></a>
+<a href="labirinto.html"><button class="btn btn-block btn-success">Iniciar Iterface de Usuário do Labirinto</button></a>
