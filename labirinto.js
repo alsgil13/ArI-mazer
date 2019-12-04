@@ -3,7 +3,7 @@
 
 var canvas = $('#GameBoardCanvas');
 
-var requestURL = 'http://alsgil13.pythonanywhere.com/';    
+var requestURL = 'https://alsgil13.pythonanywhere.com/';    
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
