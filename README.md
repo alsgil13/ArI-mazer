@@ -24,7 +24,7 @@
 def locPortas(labirinto):
     alt, larg = labirinto.shape
     i = 0
-    while(i<alt):
+    while(i < alt):
         if(labirinto[i,0]==0):
             ini = [i,0]
         if(labirinto[i,alt-1]==0):
