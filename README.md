@@ -9,9 +9,9 @@
 </ol>
 <h2>Criadores</h2>
 <ul>
-  <li>André Luiz de Souza Gil</i>
-  <li>Lucas Cardoso</li>
-  <li>Lucas Oliveira Coelho</li>
+  <li>André Luiz de Souza Gil (RA: 2804481613003)</li>
+  <li>Lucas Cardoso de Assis (RA: 2840481613024)</li>
+  <li>Lucas Oliveira Coelho (RA: 2840481613025)</li>
 </ul>
 <h2>Sobre o trabalho</h2>
 <p>Para a realização deste trabalho foi criado um labirinto inicial composto por 0 (onde há passagem) e 1 (onde há parede), foi programado um agente não informado para resolver este labirinto</p>
