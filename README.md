@@ -15,6 +15,7 @@
 </ul>
 <h2>Sobre o trabalho</h2>
 <p>Para a realização deste trabalho foi criado um labirinto inicial composto por 0 (onde há passagem) e 1 (onde há parede), foi programado um agente não informado para resolver este labirinto</p>
+<img src="img/lab_ini.png">
 <h3>Como funciona?</h3>
 <p>São 5 as funções que fazem o agente funcionar sendo uma função auxiliar para localizar as portas de entrada e saída do labirinto, três funções básicas do agente e uma função que integra as demais</p>
 <h3>Localizando as portas do labirinto</h3>
