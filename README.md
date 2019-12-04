@@ -88,6 +88,7 @@ def get_contexto(pos,nova_pos):
 
 <h3>Olhando o caminho</h3>
 <p>Além de saber a direção que está indo também é (extremamente) importante saber se há caminho naquela direção, para isso foi criada a função abaixo que retorna todos os caminhos possíveis a partir da posição do agente:</p>
+
 ```python
 def olha(labirinto,pos,contexto):
     '''
@@ -106,6 +107,7 @@ def olha(labirinto,pos,contexto):
         if( (labirinto[temp[0],temp[1]]) == 0 ):
             return (contexto[c])
 ```
+
 <h3>Andando</h3>
 <p>Para facilitar a escrita do código para o deslocamento do agente foi criada a função abaixo:</p>
 
