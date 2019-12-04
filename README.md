@@ -265,4 +265,4 @@ def classifica(caminho):
     dif = 'Difícil'
   return dif
 ```
-<a href="labirinto.html"><button class="btn btn-block btn-success">Iniciar Iterface de Usuário do Labirinto</button></a>
+<a href="https://alsgil13.github.io/ArI-mazer/labirinto.html"><button class="btn btn-block btn-success">Iniciar Iterface de Usuário do Labirinto</button></a>
