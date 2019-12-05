@@ -274,3 +274,5 @@ def classifica(caminho):
   return dif
 ```
 <a href="https://alsgil13.github.io/ArI-mazer/labirinto.html"><button class="btn btn-block btn-success">Iniciar Iterface de Usuário do Labirinto</button></a>
+
+<a href="https://alsgil13.github.io/ArI-mazer/colab.html"><button class="btn btn-block btn-success">Ver Notebook do Colab</button></a>
